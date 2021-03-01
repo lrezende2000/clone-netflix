@@ -7,7 +7,7 @@ controller.form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   if (controller.validateFields()) {
-    window.location = '/arealogada.html';
+    window.location = '/src/pages/arealogada.html';
   }
 
 });
