@@ -1,0 +1,243 @@
+:root {
+  --background-color: black;
+  --background-light: rgba(0,0,0,.75);
+  --text-color: #333;
+  --input-transition-color: #444;
+  --red-color: #e50914;
+  --color-white: white;
+  --border-color: #737373;
+  --link-color: #0071eb;
+  --error-color: orange;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color); 
+}
+
+a, span, p {
+  text-decoration: none;
+  color: var(--border-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.svg-icon {
+  width: 75px;
+  text-decoration: none;
+  vertical-align: middle;
+  fill: var(--red-color);
+  display: inline-block;
+  margin: 10px 0 0 10px;
+}
+
+.content, .footer {
+  padding: 0 5%;
+  
+}
+
+.content {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 100px;
+  margin-bottom: 20px;
+}
+
+.login-form h2 {
+  margin: 30px 0;
+  color: var(--color-white);
+}
+
+.form-input {
+  position: relative;
+  width: 100%;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 30px 0 5px 16px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: var(--text-color);
+  outline: none;
+  color: var(--color-white);
+}
+
+.form-input input:focus {
+  background-color: var(--input-transition-color);
+}
+
+.form-links input[type=checkbox] {
+  outline: none;
+  margin-right: 5px;
+}
+
+.active {
+  transform: translateY(-10px);
+  font-size: 0.7rem;
+}
+
+.error {
+  border-bottom: 2px solid var(--error-color) !important;
+}
+
+.form-input label {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  color: var(--color-white);
+  transition: .5s;
+}
+
+.form-input span {
+  color: var(--error-color);
+  font-size: 0.8rem;
+}
+
+.error-message {
+  margin-bottom: 20px;
+}
+
+.login-form button {
+  width: 100%;
+  background-color: var(--red-color);
+  border: none;
+  color: var(--color-white);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 15px 0;
+  margin: 20px 0 10px;
+  cursor: pointer;
+}
+
+.form-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--border-color);
+}
+
+.login-links {
+  font-size: 0.9rem;
+  color: var(--border-color);
+}
+
+.login-links img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.login-links div {
+  margin: 20px 0;
+}
+
+.login-links p {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.login-links p a {
+  color: var(--color-white);
+}
+
+.login-links span {
+  font-size: 0.8rem;
+}
+
+.login-links span a {
+  color: var(--link-color);
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding-bottom: 80px;
+}
+
+.footer p {
+  margin: 20px 0;
+}
+
+.footer .footer-links a {
+  width: 50%;
+  font-size: 0.83rem;
+  margin-bottom: 10px;
+}
+
+.select {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: min-content;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.select img {
+  background-color: var(--border-color);
+  border-radius: 50%;
+  width: 25px;
+  margin-right: 20px;
+}
+
+.select select {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--border-color);
+  outline: none;
+}
+
+@media (min-width: 740px) {
+  body {
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/e178a4e7-4f52-4661-b2ae-41efa25dca7c/920ff518-b8d4-4669-a652-7faa8b14f960/BR-pt-20210222-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+  }
+
+  .content {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 60px 68px 40px;
+    background-color: var(--background-light);
+    margin-bottom: 90px;
+    border: 0;
+  }
+
+  .svg-icon {
+    width: 150px;
+  }
+
+  .form-input input {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding-top: 20px;
+    background-color: var(--background-light);
+  }
+
+  .footer .footer-links a {
+    width: 25%;
+  }
+}
